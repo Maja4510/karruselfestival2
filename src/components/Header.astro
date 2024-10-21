@@ -3,12 +3,10 @@ import Menu from "./Menu.astro";
 ---
 
 <header>
-  <h1>Header</h1>
-
   <div class="header">
     <p>28–30 AUGUST 2025 | COPENHAGEN, REFSHALEØEN</p>
      <div class="logo">
-                <a href="index.html"><img src="karru" alt="logo"></a>
+                <a href="index.html"><img src="karrusel_logo_white_transparent 2.png" alt="logo"></a>
             </div>
     <Menu></Menu>
   </div>
@@ -16,11 +14,12 @@ import Menu from "./Menu.astro";
 
 <style>
   header {
-    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr 1fr;
     display: flex;
     justify-content: space-between;
     gap: var(--space-md);
     padding: 0;
     background-color: red;
+    color: white;
   }
 </style>

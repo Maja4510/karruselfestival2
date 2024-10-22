@@ -7,69 +7,78 @@
     font-style: normal;
   } */
 
-h1.d {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 64px;
+  h1.d {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 64px;
 }
 
 h2.d {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 48px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 48px;
 }
 
 h3.d {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 36px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 36px;
 }
 
 h4.d {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 20px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 20px;
 }
 
 p.d {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 22px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 22px;
 }
 
 /* Mobile skrift  */
 
 h1.m {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 48px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 48px;
 }
 
 h2.m {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 36px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 36px;
 }
 
 h3.m {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 30px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 30px;
 }
 
 h4.m {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 20px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 20px;
 }
 
 p.m {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 16px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 16px;
 }
 
 /* Farver  */
 
-p.links,
-p.skrift {
-  color: #ffffff;
+p.links, p.skrift {
+    color: #FFFFFF;
 }
 
+
 img.artist {
-  filter: grayscale();
+    filter: grayscale();
 }
 
 button {
-  color: #ffefc9;
+    color: #FFEFC9;
 }
+
+/* Baggrund */
+
+body {
+    background-image: url('karruselbaggrund.jpg');
+    background-size: cover;
+}
+
+

@@ -1,0 +1,30 @@
+---
+// @ts-nocheck
+export async function getStaticPaths() {
+  const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
+      headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6ZHB2b3JmY3lrZGViZXFpbGJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MTIwMzIsImV4cCI6MjA0NTA4ODAzMn0.pVcIPrq0E0XbMuECcUXHOmEpXK1jSYF6ACQ6Oei9ABo",
+      },
+    }).then(res=>res.json())
+  
+  return artists.map(artist => ({
+      params: { artist: artist.slug }, // [artist]=artist.slug
+      props: { artist } // send al data med som props
+    }))
+}
+
+const { artist } = Astro.props;
+console.log(artist) // artist.name, artist.image osv.
+
+---
+
+<h1>{artist.navn}</h1>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ea corrupti adipisci saepe itaque eaque numquam, eos eligendi facilis neque enim rerum hic suscipit laudantium illo cumque, nisi ratione? Sunt.</p>
+<h2>{artist.tid}</h2>
+<h2>{artist.scene}</h2>
+
+<style>
+   {
+    background-color:red;
+  }
+</style>

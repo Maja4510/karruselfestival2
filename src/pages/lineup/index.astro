@@ -1,0 +1,31 @@
+---
+import Card from "../../components/Card.astro"
+
+ const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
+      headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6ZHB2b3JmY3lrZGViZXFpbGJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MTIwMzIsImV4cCI6MjA0NTA4ODAzMn0.pVcIPrq0E0XbMuECcUXHOmEpXK1jSYF6ACQ6Oei9ABo",
+      },
+    }).then(res=>res.json())
+---
+
+<h1>Hej </h1>
+
+
+<ul>
+    <!-- {
+        artists.map(artist => <li>{artist.navn}</li>)
+    } -->
+    {
+        artists.map(artist => <Card artist={artist} />)
+        
+    
+    }
+
+   
+</ul>
+
+<style>
+  {
+    background-color:red;
+  }
+</style>

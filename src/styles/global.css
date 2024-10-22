@@ -35,27 +35,27 @@ p.d {
 /* Mobile skrift  */
 
 h1.m {
-    font-family: source code pro;
+    font-family: "Source Code Pro", monospace;
     font-weight: 48px;
 }
 
 h2.m {
-    font-family: source code pro;
+    font-family: "Source Code Pro", monospace;
     font-weight: 36px;
 }
 
 h3.m {
-    font-family: source code pro;
+    font-family: "Source Code Pro", monospace;
     font-weight: 30px;
 }
 
 h4.m {
-    font-family: source code pro;
+    font-family: "Source Code Pro", monospace;
     font-weight: 20px;
 }
 
 p.m {
-    font-family: source code pro;
+    font-family: "Source Code Pro", monospace;
     font-weight: 16px;
 }
 
@@ -73,3 +73,4 @@ img.artist {
 button {
     color: #FFEFC9;
 }
+

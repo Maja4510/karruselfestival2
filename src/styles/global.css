@@ -77,7 +77,7 @@ button {
 /* Baggrund */
 
 body {
-    background-image: url('karruselbaggrund.jpg');
+    background-image: url(karruselbaggrund.jpg);
     background-size: cover;
 }
 

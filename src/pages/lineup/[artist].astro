@@ -1,4 +1,6 @@
 ---
+import "../../styles/global.css";
+
 // @ts-nocheck
 export async function getStaticPaths() {
   const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
@@ -18,7 +20,6 @@ console.log(artist) // artist.name, artist.image osv.
 
 ---
 
-
 <h1>{artist.navn}</h1>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ea corrupti adipisci saepe itaque eaque numquam, eos eligendi facilis neque enim rerum hic suscipit laudantium illo cumque, nisi ratione? Sunt.</p>
 <h2>{artist.tid}</h2>
@@ -29,9 +30,9 @@ console.log(artist) // artist.name, artist.image osv.
     background-color:black;
     color:white;
   }
-p {
+
+  p {
     background-color:black;
     color:white;
   }
-
 </style>

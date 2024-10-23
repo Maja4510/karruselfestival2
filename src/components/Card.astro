@@ -4,9 +4,13 @@ const { artist } = Astro.props;
 
 <li>
   <a href={`/lineup/${artist.slug}`}>
-    <h1>{artist.navn}</h1>
+    <h3>{artist.navn}</h3>
+    <h3>{artist.tid}</h3>
+    
   </a>
+  
 </li>
+ 
 
 <style>
   

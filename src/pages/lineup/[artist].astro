@@ -20,19 +20,48 @@ console.log(artist) // artist.name, artist.image osv.
 
 ---
 
+<ul class="navnogtekst">
 <h1>{artist.navn}</h1>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ea corrupti adipisci saepe itaque eaque numquam, eos eligendi facilis neque enim rerum hic suscipit laudantium illo cumque, nisi ratione? Sunt.</p>
+</ul>
+<ul class="tidogscene">
 <h2>{artist.tid}</h2>
 <h2>{artist.scene}</h2>
+</ul>
+
 
 <style>
    h1 {
-    background-color:black;
+    
     color:white;
   }
 
   p {
-    background-color:black;
     color:white;
+  }
+
+   ul{
+    list-style-type:none;
+    color:white;
+    text-decoration:none;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust 0.5 to your desired level of transparency */
+  }
+  
+
+  .tidogscene{
+     display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* hide wrapping rows */
+      gap: 60px;
+      place-items: center;
+  }
+
+  .navnogtekst{
+display: grid;
+ place-items: center;
+  }
+
+  body{
+    padding: 70px;
   }
 </style>

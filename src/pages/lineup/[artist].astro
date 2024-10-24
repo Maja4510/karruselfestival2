@@ -19,8 +19,10 @@ const { artist } = Astro.props;
 console.log(artist) // artist.name, artist.image osv.
 
 ---
-
+<a href="index.html">
 <img src="/public/tilbageknap.svg" alt="tilbageknap">
+</a>
+
 <h1>Artist</h1>
 <ul class="navnogtekst">
 <h1>{artist.navn}</h1>
@@ -76,5 +78,9 @@ display: grid;
 
   body{
     padding: 70px;
+  }
+
+  img{
+width: 40px;
   }
 </style>

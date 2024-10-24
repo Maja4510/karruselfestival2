@@ -1,6 +1,8 @@
 ---
 import Card from "../../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro"
+import Footer from "../../components/Footer.astro";
+
 
  const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
       headers: {
@@ -44,6 +46,10 @@ import MainLayout from "../layouts/MainLayout.astro"
 </ul>
 </MainLayout>
 
+
+    <Footer />
+
+
 <style>
   ul{
     list-style-type:none;
@@ -61,6 +67,8 @@ import MainLayout from "../layouts/MainLayout.astro"
       gap: 60px;
      
   }
+
+  
   
  
 

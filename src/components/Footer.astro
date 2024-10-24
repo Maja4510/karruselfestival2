@@ -1,5 +1,41 @@
-<footer>
+---
+import "../styles/global.css";
+
+---
+
+
+
     <a href="index.html">
-            <h1>footer</h1>
+           
         </a>
-</footer>
+        <div class="horizontal-line"></div>
+        <div class="grid-container">
+            <img src="/public/Instagram.svg" alt="ikon1" width="10%" height="30%">
+            <img src="/public/Facebook.svg" alt="ikon2" width="10%" height="30%" >
+            <img class="Brev" src="/public/Newsletter.svg" alt="brev" width="30%" height="50%">
+          </div>
+
+          
+
+<style>
+    .horizontal-line {
+  width: 100%;         
+  height: 2px;        
+  background-color: white 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Brev {
+    margin-left: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+</style>

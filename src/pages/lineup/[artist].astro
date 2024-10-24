@@ -1,5 +1,6 @@
 ---
 import "../../styles/global.css";
+import Footer from "../../components/Footer.astro";
 
 // @ts-nocheck
 export async function getStaticPaths() {
@@ -29,6 +30,7 @@ console.log(artist) // artist.name, artist.image osv.
 <h2>{artist.scene}</h2>
 </ul>
 
+<Footer />
 
 <style>
    h1 {

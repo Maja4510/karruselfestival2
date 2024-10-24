@@ -13,19 +13,25 @@ import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="global.css" type="image/svg+xml" href="/favicon.svg" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-		<Header></Header>
-
-
-	
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="global.css" type="image/svg+xml" href="/favicon.svg" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Astro</h1>
+    <Header />
+  </body>
+  <main>
+    <Herosection />
+    <section>
+      <Button text="TICKETS/" link="/tickets" />
+    </section>
+    <section>
+      <Button text="LINEUP/" link="/lineup" />
+    </section>
+  </main>
 </html>

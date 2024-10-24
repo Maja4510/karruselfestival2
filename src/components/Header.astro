@@ -1,35 +1,58 @@
----
-export interface Props {
-  showImage?: boolean;
-}
-
-const { showImage = true } = Astro.props;
----
-
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="global.css" type="image/svg+xml" href="/favicon.svg" />
+    <title>header</title>
+  </head>
+ 
 <header>
-  <div class="header">
-    <p>28–30 AUGUST 2025 | COPENHAGEN, REFSHALEØEN</p>
-    <div class="logo">
-      <!-- <a href="index.html"><img src="karrusel_logo_white_transparent 2.png" alt="logo" /></a> -->
-      {
-        showImage && (
-          <a href="index.html">
-            <img src="karrusel_logo_white_transparent 2.png" alt="logo" />
-          </a>
-        )
-      }
+    <div class="header">
+        <p class="text_header">28-30 AUGUST 2025 | COPENHAGEN, REFSHALEØEN</p>
+        <img src="karrusel_logo_white_transparent 2.png" alt="Karrusel Logo" class="logo">
     </div>
-  </div>
 </header>
-
+ 
+ 
+ 
+ 
 <style>
-  header {
-    grid-template-columns: 1fr 1fr 1fr;
+header {
+ 
+  position:relative;
     display: flex;
-    justify-content: space-between;
-    gap: var(--space-md);
-    padding: 0;
-
-    color: white;
-  }
+    padding: 20px;
+    color: white; /* Tekstfarve */
+ 
+    
+}
+ 
+.header {
+display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+    gap: 70px; /* Plads mellem tekst og logo */
+}
+ 
+.text_header {
+  
+    text-align: right; /* Juster teksten, hvis nødvendigt */
+    line-height: 1.2em; /* Juster linjehøjde, så teksten ser pæn ud */
+    color: white; /* Tekstfarve */
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    font-weight: 500; /* Du kan ændre fonten, hvis ønsket */
+}
+ 
+.logo {
+align-items: center;
+ 
+width: 150px;
+    height: auto; /* Bevarer proportionerne */
+}
+ 
 </style>

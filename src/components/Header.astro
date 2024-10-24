@@ -1,14 +1,24 @@
 ---
+export interface Props {
+  showImage?: boolean;
+}
 
+const { showImage = true } = Astro.props;
 ---
 
 <header>
   <div class="header">
     <p>28–30 AUGUST 2025 | COPENHAGEN, REFSHALEØEN</p>
-     <div class="logo">
-                <a href="index.html"><img src="karrusel_logo_white_transparent 2.png" alt="logo"></a>
-            </div>
- 
+    <div class="logo">
+      <!-- <a href="index.html"><img src="karrusel_logo_white_transparent 2.png" alt="logo" /></a> -->
+      {
+        showImage && (
+          <a href="index.html">
+            <img src="karrusel_logo_white_transparent 2.png" alt="logo" />
+          </a>
+        )
+      }
+    </div>
   </div>
 </header>
 
@@ -19,7 +29,7 @@
     justify-content: space-between;
     gap: var(--space-md);
     padding: 0;
-   
+
     color: white;
   }
 </style>

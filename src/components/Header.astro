@@ -1,4 +1,13 @@
-<html lang="da">
+---
+export interface Props {
+  showImage?: boolean;
+}
+
+
+
+const { showImage = true } = Astro.props;
+---
+ <html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -7,11 +16,11 @@
     <link rel="global.css" type="image/svg+xml" href="/favicon.svg" />
     <title>header</title>
   </head>
- 
+
 <header>
     <div class="header">
         <p class="text_header">28-30 AUGUST 2025 | COPENHAGEN, REFSHALEØEN</p>
-        <img src="karrusel_logo_white_transparent 2.png" alt="Karrusel Logo" class="logo">
+        {showImage && <img src="/public/karrusel_logo_white_transparent 2.png" alt="Karrusel Logo" class="logo" />}
     </div>
 </header>
  

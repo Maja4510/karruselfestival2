@@ -1,6 +1,7 @@
 ---
 import Card from "../../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro"
+import Header from "../../components/Header.astro"
 
  const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
       headers: {
@@ -8,10 +9,12 @@ import MainLayout from "../layouts/MainLayout.astro"
       },
     }).then(res=>res.json())
 ---
-
+<Header></Header>
  <a href="index.html">
  <img src="/public/tilbageknap.svg" alt="tilbageknap">
     </a>
+
+    
 <MainLayout>
    
    

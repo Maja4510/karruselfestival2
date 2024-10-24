@@ -1,5 +1,6 @@
 ---
 import "../../styles/global.css";
+import Header from "../../components/Header.astro"
 
 // @ts-nocheck
 export async function getStaticPaths() {
@@ -19,13 +20,13 @@ export async function getStaticPaths() {
 const { artist } = Astro.props;
 console.log(artist); // artist.name, artist.image osv.
 ---
-
+<Header></Header>
 <a href="index.html">
   <img src="/public/tilbageknap.svg" alt="tilbageknap" />
 </a>
 
 <h1>Artist</h1>
-
+<div class="box">
 <ul class="navnogtekst">
   <h1></h1>
   <h1></h1>
@@ -41,6 +42,11 @@ console.log(artist); // artist.name, artist.image osv.
     <h1></h1>
   </div>
 </ul>
+
+
+
+</div>
+
 
 <style>
   h1 {
@@ -91,5 +97,8 @@ console.log(artist); // artist.name, artist.image osv.
 
   .artistbillede {
     width: 300px;
+  }
+  .box{
+    padding: 100px;
   }
 </style>

@@ -10,8 +10,8 @@ import "../styles/global.css";
         </a>
         <div class="horizontal-line"></div>
         <div class="grid-container">
-            <img src="/public/Instagram.svg" alt="ikon1" width="10%" height="30%">
-            <img src="/public/Facebook.svg" alt="ikon2" width="10%" height="30%" >
+            <img class="ikon1" src="/public/Instagram.svg" alt="ikon1" width="10%" height="30%">
+            <img class="ikon2" src="/public/Facebook.svg" alt="ikon2" width="10%" height="30%" >
             <img class="Brev" src="/public/Newsletter.svg" alt="brev" width="30%" height="50%">
           </div>
 
@@ -29,13 +29,17 @@ import "../styles/global.css";
   grid-template-columns: repeat(2, 1fr); 
   display: flex;
   justify-content: flex-start;
+  padding-top: 10px;
 }
 
 .Brev {
-    margin-left: 50%;
+    margin-left: 80%;
     display: flex;
     justify-content: flex-end;
 }
 
+.ikon2 {
+ padding-left: 20px;
+}
 
 </style>

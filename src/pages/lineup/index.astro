@@ -1,7 +1,12 @@
 ---
 import Card from "../../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro"
+<<<<<<< HEAD
 import Header from "../../components/Header.astro"
+=======
+import Footer from "../../components/Footer.astro";
+
+>>>>>>> 9cc43f776568dcfa05c46f18d8a43374d0e3c46e
 
  const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
       headers: {
@@ -52,6 +57,10 @@ import Header from "../../components/Header.astro"
 </ul>
 </MainLayout>
 
+
+    <Footer />
+
+
 <style>
   ul{
     list-style-type:none;
@@ -67,6 +76,8 @@ import Header from "../../components/Header.astro"
       gap: 60px;
      
   }
+
+  
   /* Desktop skrift
 
 .source-code-pro-<uniquifier> {

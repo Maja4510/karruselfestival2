@@ -22,16 +22,42 @@ import Card from "../components/Card.astro";
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
-    <Header />
+    <main>
+      <Header showImage={false} />
+      <Herosection />
+      <div>
+        <section>
+          <Button class="knap1" text="TICKETS/" link="/tickets" />
+        </section>
+        <section>
+          <Button class="knap2" text="LINEUP/" link="/lineup" />
+        </section>
+      </div>
+    </main>
   </body>
-  <main>
-    <Herosection />
-    <section>
-      <Button text="TICKETS/" link="/tickets" />
-    </section>
-    <section>
-      <Button text="LINEUP/" link="/lineup" />
-    </section>
-  </main>
 </html>
+
+<style>
+  div {
+    display: flex;
+    padding-top: 300px;
+    gap: 25rem;
+    flex-wrap: wrap;
+  }
+  body,
+  main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+    > * {
+      grid-area: 1 / 1;
+    }
+    header {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+  }
+</style>

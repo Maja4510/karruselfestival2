@@ -20,8 +20,13 @@ const { artist } = Astro.props;
 console.log(artist) // artist.name, artist.image osv.
 
 ---
+<a href="index.html">
+<img src="/public/tilbageknap.svg" alt="tilbageknap">
+</a>
 
+<h1>Artist</h1>
 <ul class="navnogtekst">
+  <img class="artistbillede" src="/public/teison.png" alt="teison">
 <h1>{artist.navn}</h1>
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ea corrupti adipisci saepe itaque eaque numquam, eos eligendi facilis neque enim rerum hic suscipit laudantium illo cumque, nisi ratione? Sunt.</p>
 </ul>
@@ -34,12 +39,23 @@ console.log(artist) // artist.name, artist.image osv.
 
 <style>
    h1 {
-    
+     font-size: 48px;
     color:white;
+  }
+
+  h2{
+    font-size: 20px;
+    border: 2px solid white; 
+    padding: 10px;
+    display: inline-block; 
+     border-right: 30px solid transparent;
+     border-bottom: 20px solid transparent;
+     border-left: 30px solid white;
   }
 
   p {
     color:white;
+    padding: 90px;
   }
 
    ul{
@@ -65,5 +81,13 @@ display: grid;
 
   body{
     padding: 70px;
+  }
+
+  img{
+width: 40px;
+  }
+
+  .artistbillede{
+    width: 300px;
   }
 </style>

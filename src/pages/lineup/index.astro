@@ -11,7 +11,12 @@ import Footer from "../../components/Footer.astro";
     }).then(res=>res.json())
 ---
 
+ <a href="index.html">
+ <img src="/public/tilbageknap.svg" alt="tilbageknap">
+    </a>
 <MainLayout>
+   
+   
 <h1 class="lineupoverskrift">Lineup </h1>
 <h1>THURSDAY 22 AUG 2023</h1>
 <ul class="lineup">
@@ -57,11 +62,9 @@ import Footer from "../../components/Footer.astro";
     text-decoration:none;
     background-color: rgba(0, 0, 0, 0.8); /* Adjust 0.5 to your desired level of transparency */
   }
-  
   .lineup{
     display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
       /* hide wrapping rows */
       grid-template-rows: 4;
       gap: 60px;
@@ -69,9 +72,6 @@ import Footer from "../../components/Footer.astro";
   }
 
   
-  
- 
-
   /* Desktop skrift
 
 .source-code-pro-<uniquifier> {
@@ -80,14 +80,10 @@ import Footer from "../../components/Footer.astro";
     font-weight: <weight>;
     font-style: normal;
   } */
-
   h1 {
     font-family: "Source Code Pro", monospace;
     font-size: 24px;
 }
-
-
-
 /* Mobile skrift  */
 
 h1 {
@@ -101,19 +97,18 @@ font-family: "Source Code Pro", monospace;
     font-size: 48px;
     color:white;
 }
-
 ul
 {
     font-family: "Source Code Pro", monospace;
     font-weight: 48px;
-    
+    padding:80px;
    
 }
-
 body {
-    background-image: url('karruselbaggrund.jpg');
-    padding: 25px;
-    
+    padding: 60px;
 }
+img{
+width: 40px;
+  }
 
 </style>

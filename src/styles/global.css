@@ -70,10 +70,6 @@ p.skrift {
   color: #ffffff;
 }
 
-img.artist {
-  filter: grayscale();
-}
-
 button {
   color: #ffefc9;
 }
@@ -83,5 +79,9 @@ button {
 body {
   background-image: url("../karruselbaggrund.jpg");
   background-size: cover;
-  filter: grayscale(50%);
+ 
+  
 }
+
+
+

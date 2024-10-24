@@ -4,23 +4,24 @@ import "../../styles/global.css";
 // @ts-nocheck
 export async function getStaticPaths() {
   const artists = await fetch("https://hzdpvorfcykdebeqilbf.supabase.co/rest/v1/artister", {
-      headers: {
-        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6ZHB2b3JmY3lrZGViZXFpbGJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MTIwMzIsImV4cCI6MjA0NTA4ODAzMn0.pVcIPrq0E0XbMuECcUXHOmEpXK1jSYF6ACQ6Oei9ABo",
-      },
-    }).then(res=>res.json())
-  
-  return artists.map(artist => ({
-      params: { artist: artist.slug }, // [artist]=artist.slug
-      props: { artist } // send al data med som props
-    }))
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6ZHB2b3JmY3lrZGViZXFpbGJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MTIwMzIsImV4cCI6MjA0NTA4ODAzMn0.pVcIPrq0E0XbMuECcUXHOmEpXK1jSYF6ACQ6Oei9ABo",
+    },
+  }).then((res) => res.json());
+
+  return artists.map((artist) => ({
+    params: { artist: artist.slug }, // [artist]=artist.slug
+    props: { artist }, // send al data med som props
+  }));
 }
 
 const { artist } = Astro.props;
-console.log(artist) // artist.name, artist.image osv.
-
+console.log(artist); // artist.name, artist.image osv.
 ---
+
 <a href="index.html">
-<img src="/public/tilbageknap.svg" alt="tilbageknap">
+  <img src="/public/tilbageknap.svg" alt="tilbageknap" />
 </a>
 
 <h1>Artist</h1>
@@ -28,63 +29,67 @@ console.log(artist) // artist.name, artist.image osv.
 <ul class="navnogtekst">
   <h1></h1>
   <h1></h1>
-  <img class="artistbillede" src="/public/teison.png" alt="teison">
-<h1>{artist.navn}</h1>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ea corrupti adipisci saepe itaque eaque numquam, eos eligendi facilis neque enim rerum hic suscipit laudantium illo cumque, nisi ratione? Sunt.</p>
-<div class="tidogscene">
-<h2>{artist.tid}</h2>
-<h2>{artist.scene}</h2>
-<h1></h1>
-</div>
+  <img class="artistbillede" src="/public/teison.png" alt="teison" />
+  <h1>{artist.navn}</h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi ea corrupti adipisci saepe itaque eaque numquam, eos eligendi facilis neque enim rerum hic suscipit laudantium illo cumque, nisi
+    ratione? Sunt.
+  </p>
+  <div class="tidogscene">
+    <h2>{artist.tid}</h2>
+    <h2>{artist.scene}</h2>
+    <h1></h1>
+  </div>
 </ul>
 
-
-
-
 <style>
-   h1 {
-     font-size: 48px;
-    color:white;
+  h1 {
+    font-size: 48px;
+    color: white;
   }
-  h2{
+
+  h2 {
     font-size: 20px;
-    border: 2px solid white; 
+    border: 2px solid white;
     padding: 10px;
-    display: inline-block; 
+    display: inline-block;
+    border-right: 30px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid white;
   }
   p {
-    color:white;
+    color: white;
     padding: 90px;
   }
-   ul{
-    list-style-type:none;
-    color:white;
-    text-decoration:none;
+  ul {
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
     background-color: rgba(0, 0, 0, 0.8); /* Adjust 0.5 to your desired level of transparency */
     margin: 20px;
   }
-  .tidogscene{
-     display: grid;
-      grid-template-columns: 1fr 1fr;
-      /* hide wrapping rows */
-      gap: 60px;
-      place-items: center;
+  .tidogscene {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* hide wrapping rows */
+    gap: 60px;
+    place-items: center;
   }
 
-  .navnogtekst{
-display: grid;
- place-items: center;
+  .navnogtekst {
+    display: grid;
+    place-items: center;
   }
 
-  body{
+  body {
     padding: 70px;
   }
 
-  img{
-width: 40px;
+  img {
+    width: 40px;
   }
 
-  .artistbillede{
+  .artistbillede {
     width: 300px;
   }
 </style>

@@ -11,6 +11,7 @@ const { text, link } = Astro.props;
     background-color: #ffffff;
     border-width: 0;
     box-sizing: border-box;
+    border-radius: 25px;
     color: #000000;
     cursor: pointer;
     display: inline-block;
@@ -42,7 +43,7 @@ const { text, link } = Astro.props;
   .button:before {
     animation: opacityFallbackOut 0.5s step-end forwards;
     backface-visibility: hidden;
-    background-color: #ebebeb;
+    background-color: rgba(233, 58, 87, 1);
     clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
     content: "";
     height: 100%;
@@ -50,6 +51,7 @@ const { text, link } = Astro.props;
     position: absolute;
     top: 0;
     transform: translateZ(0);
+    border-radius: 25px;
     transition:
       clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
       -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
